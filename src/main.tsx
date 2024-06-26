@@ -23,6 +23,7 @@ import MyQuestion from "./page/information/myQuestion.tsx";
 import { ApolloProvider } from "@apollo/client";
 import { client } from "./client.tsx";
 import Document from "./page/dashboard/component/document.tsx";
+import Announcement from "./page/dashboard/component/announcement.tsx";
 
 const router = createBrowserRouter([
   {
@@ -97,6 +98,10 @@ const router = createBrowserRouter([
         path: "/dashboard/doc/:id",
         element: <Document />,
       },
+      {
+        path:"/dashboard/anc/:id",
+        element:<Announcement/>
+      }
     ],
   },
   {

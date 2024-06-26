@@ -1,7 +1,7 @@
 const MyQuestion=()=>{
     return(
         <div>
-            1
+
         </div>
     )
 }

@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { client } from "../../client.tsx";
 import { formatDistanceToNow } from "date-fns";
 import { zhCN } from "date-fns/locale";
-const QUERY_ARTICLE = gql(`query queryArticle {
+const QUERY_ARTICLE = gql(`query queryArticleContent {
   posts(where: {tag: {_eq: "文章"}}) {
     title
     user {
