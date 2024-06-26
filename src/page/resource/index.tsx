@@ -1,3 +1,4 @@
+import './resource.css'
 const Resource=()=>{
     return(
         <div>
