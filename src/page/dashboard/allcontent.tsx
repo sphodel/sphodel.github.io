@@ -48,8 +48,11 @@ const AllContent = () => {
       return res.data.posts;
     };
     const fetchData = async () => {
-      const data = await getContent();
-      setContents(data);
+      const data:Post[] = await getContent();
+      if(data){
+        setContents(data);
+      }
+
     };
     void fetchData();
   }, [contents]);

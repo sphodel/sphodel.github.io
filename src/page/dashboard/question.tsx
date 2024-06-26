@@ -31,7 +31,7 @@ interface QueryContentData {
     posts: Post[];
 }
 const Question = () => {
-    const [contents, setContents] = useState([]);
+    const [contents, setContents] = useState<Post[]>([]);
     const formatRelativeTime = (timestamp: string): string => {
         return formatDistanceToNow(new Date(timestamp), { addSuffix: true , locale: zhCN});
     };

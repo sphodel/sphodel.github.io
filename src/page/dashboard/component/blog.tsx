@@ -1,6 +1,6 @@
 import article from "../../../assets/article.svg";
 import {Input, message} from "antd";
-import React, {useState} from "react";
+import {useState} from "react";
 import DraftEditor from "../../../component/Editor/DraftEditor.jsx";
 import {gql} from "@apollo/client";
 import {client} from "../../../client.tsx";

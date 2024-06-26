@@ -3,7 +3,7 @@ import question from "../../../assets/question.svg";
 import { LeftOutlined, QuestionCircleOutlined } from "@ant-design/icons";
 import {Input, message} from "antd";
 import DraftEditor from "../../../component/Editor/DraftEditor.jsx";
-import React, {useState} from "react";
+import  {useState} from "react";
 import {gql} from "@apollo/client";
 import {client} from "../../../client.tsx";
 const INSERT_QUESTION=gql(`mutation InsertQuestion($user_id: String = "", $title: String = "", $summary: String = "", $content: String = "") {

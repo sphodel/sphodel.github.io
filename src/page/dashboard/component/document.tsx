@@ -1,8 +1,7 @@
-import avatar from "../../../assets/avatar.png";
 import { useNavigate, useParams } from "react-router-dom";
 import { Input, message } from "antd";
 import { ApolloQueryResult, gql } from "@apollo/client";
-import React, { useEffect, useState } from "react";
+import  { useEffect, useState } from "react";
 import { client } from "../../../client.tsx";
 import { formatDistanceToNow } from "date-fns";
 import { zhCN } from "date-fns/locale";
@@ -54,7 +53,8 @@ interface QueryContentData {
   posts: Post[];
 }
 const Document = () => {
-  const { id } = useParams<{ id: number }>();
+  const { id1 } = useParams();
+  const id = parseInt(id1)
   const [contents, setContents] = useState<Post[]>([]);
   const [replies, setReplies] = useState([]);
   useEffect(() => {
@@ -103,7 +103,7 @@ const Document = () => {
   return (
     <div className={"bg-[#E1E1E1] overflow-hidden"}>
       {contextHolder}
-      {contents.length && (
+      {contents.length&&replies.length && (
         <div>
           <div className={"pt-4 w-11/12 m-auto"}>
             <div className={"float-right w-72 flex flex-col"}>
@@ -161,7 +161,7 @@ const Document = () => {
               </div>
               <div className={"bg-white p-2"}>
                 {replies.map((reply, index) => (
-                  <div className={"mb-4"}>
+                  <div className={"mb-4"} key={index}>
                     <a href={"/personal/article"} className={"float-left pl-2"}>
                       <img src={reply.user.avatar} alt={""} width={30} height={30} />
                     </a>

@@ -27,6 +27,18 @@ const user_info = gql(`query userInfo($id: String!) {
   }
 }
 `);
+interface FilterType{
+  title:string
+  id:number,
+  replies:number[]
+}
+interface FilterType1{
+  title:string
+  id:number
+}
+interface FilterType2{
+  post:FilterType1[]
+}
 interface User {
   avatar: string;
   Profile: string;
@@ -63,7 +75,7 @@ const Sidebar = () => {
       const res:ApolloQueryResult<{posts:Post}>=await client.query({
         query:NO_REPLIES,
       })
-      const resData=res.data.posts.filter((post) => post.replies.length === 0);
+      const resData:FilterType1=res.data.posts.filter((post:FilterType) => post.replies.length === 0);
       setFilteredPosts(resData);
     }
     const fetchUserInfo = async (id: string): Promise<User[] | null> => {
@@ -74,12 +86,12 @@ const Sidebar = () => {
       return res.data.users;
     };
 
-    const fetchAndSetUser = async () => {
+    const fetchAndSetUser = async (myId:string) => {
       const userInfo = await fetchUserInfo(myId);
       setUser(userInfo)
     };
     void fetchNOQuery()
-    void fetchAndSetUser();
+    void fetchAndSetUser(myId);
   }, [myId]);
 
   return (
@@ -154,7 +166,7 @@ const Sidebar = () => {
       </Modal>
       <div className={"bg-white mb-4 rounded"}>
         <div className={"p-2 bg-[#f6f6f6] text-xs"}>无人回复的话题</div>
-        <div className={"pl-2 text-sm gap-2 flex flex-col py-1"}>{filteredPosts.map((filteredPost,i)=>(
+        <div className={"pl-2 text-sm gap-2 flex flex-col py-1"}>{filteredPosts.map((filteredPost:FilterType,i)=>(
             <Link key={i} to={`doc/${filteredPost.id}`}>{filteredPost.title}</Link>
         ))}</div>
       </div>

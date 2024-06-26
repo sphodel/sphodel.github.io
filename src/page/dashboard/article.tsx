@@ -47,7 +47,10 @@ const Article = () => {
     };
     const fetchData = async () => {
       const data = await getContent();
-      setContents(data);
+      if(data){
+        setContents(data);
+      }
+
     };
     void fetchData();
   }, [contents]);
