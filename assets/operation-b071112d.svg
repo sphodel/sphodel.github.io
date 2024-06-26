@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="36px" height="36px" viewBox="0 0 36 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>Icon/operation</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="26" cy="28" r="14.5"></circle>
+        <path d="M26.3333333,19.6483658 C29.3248757,19.6483658 31.75,17.2232415 31.75,14.2316991 C31.75,11.2401567 29.3248757,8.81503243 26.3333333,8.81503243 C23.3417909,8.81503243 20.9166667,11.2401567 20.9166667,14.2316991 C20.9166667,17.2232415 23.3417909,19.6483658 26.3333333,19.6483658 Z" id="path-2"></path>
+        <path d="M14.4166667,40.4166667 C17.4082091,40.4166667 19.8333333,37.9915424 19.8333333,35 C19.8333333,32.0084576 17.4082091,29.5833333 14.4166667,29.5833333 C11.4251243,29.5833333 9,32.0084576 9,35 C9,37.9915424 11.4251243,40.4166667 14.4166667,40.4166667 Z" id="path-3"></path>
+        <path d="M37.7049107,40.4166667 C40.6964531,40.4166667 43.1215773,37.9915424 43.1215773,35 C43.1215773,32.0084576 40.6964531,29.5833333 37.7049107,29.5833333 C34.7133683,29.5833333 32.288244,32.0084576 32.288244,35 C32.288244,37.9915424 34.7133683,40.4166667 37.7049107,40.4166667 Z" id="path-4"></path>
+    </defs>
+    <g id="marcusfei-视觉" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.900000036">
+        <g id="选择问题类型" transform="translate(-798.000000, -478.000000)">
+            <g id="Element-/-Question-Bar" transform="translate(678.000000, 354.000000)">
+                <g id="Icon/operation" transform="translate(112.000000, 116.000000)">
+                    <rect id="矩形" x="0" y="0" width="52" height="52"></rect>
+                    <g id="椭圆形备份-3" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6">
+                        <use stroke="#FFC300" fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                        <use stroke-opacity="0.1" stroke="#000000" xlink:href="#path-1"></use>
+                    </g>
+                    <g id="椭圆形" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6">
+                        <use stroke="#FFC300" fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-2"></use>
+                        <use stroke-opacity="0.1" stroke="#000000" xlink:href="#path-2"></use>
+                    </g>
+                    <g id="椭圆形备份" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6">
+                        <use stroke="#FFC300" fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-3"></use>
+                        <use stroke-opacity="0.1" stroke="#000000" xlink:href="#path-3"></use>
+                    </g>
+                    <g id="椭圆形备份-2" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6">
+                        <use stroke="#FFC300" fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-4"></use>
+                        <use stroke-opacity="0.1" stroke="#000000" xlink:href="#path-4"></use>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

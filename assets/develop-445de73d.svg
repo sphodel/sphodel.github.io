@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="46px" height="30px" viewBox="0 0 46 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>Icon/develop</title>
+    <desc>Created with Sketch.</desc>
+    <g id="marcusfei-视觉" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.900000036">
+        <g id="选择问题类型" transform="translate(-505.000000, -481.000000)">
+            <g id="Element-/-Question-Bar" transform="translate(390.000000, 354.000000)">
+                <g id="Icon/develop" transform="translate(112.000000, 116.000000)">
+                    <rect id="矩形" x="0" y="0" width="52" height="52"></rect>
+                    <polyline id="路径" stroke="#6467F0" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="round" points="12 13 4 26 12 39"></polyline>
+                    <polyline id="路径备份" stroke="#6467F0" stroke-width="1.6" stroke-linejoin="round" transform="translate(43.750000, 26.000000) scale(-1, 1) translate(-43.750000, -26.000000) " points="47.75 13 39.75 26 47.75 39"></polyline>
+                    <path d="M31.5,13 L20.5,39" id="路径-2" stroke="#6467F0" stroke-width="1.6" stroke-linejoin="round"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
