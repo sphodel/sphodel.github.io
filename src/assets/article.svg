@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="66px" height="66px" viewBox="0 0 66 66" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>publish_article_icon</title>
+    <desc>Created with Sketch.</desc>
+    <g id="publish_article_icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-5" transform="translate(1.000000, 1.000000)">
+            <g id="Group-9" fill="#07C160">
+                <circle id="Oval" cx="32" cy="32" r="32"></circle>
+            </g>
+            <g id="Group-28" transform="translate(22.000000, 20.000000)" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="1.63636364">
+                <path d="M1.6563486,0.818181818 C1.44924182,0.818181818 1.2813486,0.986075037 1.2813486,1.19318182 L1.2813486,22.8068182 C1.2813486,23.013925 1.44924182,23.1818182 1.6563486,23.1818182 L18.3608941,23.1818182 C18.5680008,23.1818182 18.7358941,23.013925 18.7358941,22.8068182 L18.7358941,1.19318182 C18.7358941,0.986075037 18.5680008,0.818181818 18.3608941,0.818181818 L1.6563486,0.818181818 Z M2.81818182,9.12587413 L2.81818182,5.64335664 L10.8181818,5.64335664 L10.8181818,9.12587413 L2.81818182,9.12587413 Z M2.81818182,13.7412587 L2.81818182,10.2587413 L16.2727273,10.2587413 L16.2727273,13.7412587 L2.81818182,13.7412587 Z M2.81818182,14.8741259 L16.2727273,14.8741259 L16.2727273,18.3566434 L2.81818182,18.3566434 L2.81818182,14.8741259 Z" id="Combined-Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>
