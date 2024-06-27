@@ -3,9 +3,10 @@ import { useState } from "react";
 import {ApolloQueryResult, gql} from "@apollo/client";
 import { client } from "../../client.tsx";
 import { v4 as uuidv4 } from 'uuid';
+import {useNavigate} from "react-router-dom";
 const NEWACCOUNT = gql`
-  mutation newAccount($account: String = "", $id: String = "", $name: String = "", $password: String = "", $time: timestamp = "") {
-  insert_users_one(object: {account: $account, id: $id, name: $name, password: $password, time: $time}) {
+  mutation newAccount($account: String = "", $id: String = "", $name: String = "", $password: String = "") {
+  insert_users_one(object: {account: $account, id: $id, name: $name, password: $password}) {
     id
   }
 }
@@ -29,6 +30,7 @@ const Register = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [messageApi, contextHolder] = message.useMessage();
+  const navigate=useNavigate()
   const handleRegister = async () => {
     await client.query({
       query:QUERY_IF_USER_NAME_EXIST,
@@ -55,14 +57,12 @@ const Register = () => {
         return;
       }
 
-      const time =new Date().toISOString()
       const id=uuidv4()
       await client.mutate({
         mutation:NEWACCOUNT,
         variables:{
           account:email,
           password:password,
-          time:time,
           id:id,
           name:name
         }
@@ -72,6 +72,10 @@ const Register = () => {
           content: '注册成功',
         });
       })
+      setTimeout(()=>{
+        navigate('/login')
+      },1000)
+
     })
 
   };

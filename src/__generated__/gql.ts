@@ -31,8 +31,10 @@ const documents = {
     "query queryArticle {\n  posts(where: {tag: {_eq: \"问答\"}}) {\n    title\n    user {\n      avatar\n    }\n    created_at\n    tag\n    id\n  }\n}\n": types.QueryArticleDocument,
     "query queryInfo($id: String!) {\n  users(where: {id: {_eq: $id}}) {\n    Profile\n    avatar\n    birthday\n    id\n    name\n    sex\n  }\n}\n": types.QueryInfoDocument,
     "\n  mutation updateUsers(\n    $id: String!\n    $avatar: String!\n    $Profile: String!\n    $sex: String!\n  ) {\n    update_users(\n      where: { id: { _eq: $id } }\n      _set: {\n        avatar: $avatar\n        Profile: $Profile\n        sex: $sex\n      }\n    ) {\n      returning {\n        id\n      }\n    }\n  }\n": types.UpdateUsersDocument,
+    "query queryUserInfos($id: String!) {\n  users(where: {id: {_eq: $id}}) {\n    name\n    Profile\n    avatar\n  }\n}\n": types.QueryUserInfosDocument,
+    "query queryMyArticles($user_id: String!) {\n  posts(where: {user_id: {_eq: $user_id}, tag: {_eq: \"文章\"}}) {\n    title\n  }\n}\n": types.QueryMyArticlesDocument,
     "query MyQuery($account: String!, $password: String!) {\n  users(where: {account: {_eq: $account}, password: {_eq: $password}}) {\n    id\n  }\n}\n": types.MyQueryDocument,
-    "\n  mutation newAccount($account: String = \"\", $id: String = \"\", $name: String = \"\", $password: String = \"\", $time: timestamp = \"\") {\n  insert_users_one(object: {account: $account, id: $id, name: $name, password: $password, time: $time}) {\n    id\n  }\n}\n": types.NewAccountDocument,
+    "\n  mutation newAccount($account: String = \"\", $id: String = \"\", $name: String = \"\", $password: String = \"\") {\n  insert_users_one(object: {account: $account, id: $id, name: $name, password: $password}) {\n    id\n  }\n}\n": types.NewAccountDocument,
     "query user_exist($name: String!) {\n  users(where: {name: {_eq: $name}}) {\n    id\n  }\n}": types.User_ExistDocument,
     "query user_exists($account: String!) {\n  users(where: {account: {_eq: $account}}) {\n    id\n  }\n}\n": types.User_ExistsDocument,
 };
@@ -126,11 +128,19 @@ export function gql(source: "\n  mutation updateUsers(\n    $id: String!\n    $a
 /**
  * The gql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
  */
+export function gql(source: "query queryUserInfos($id: String!) {\n  users(where: {id: {_eq: $id}}) {\n    name\n    Profile\n    avatar\n  }\n}\n"): (typeof documents)["query queryUserInfos($id: String!) {\n  users(where: {id: {_eq: $id}}) {\n    name\n    Profile\n    avatar\n  }\n}\n"];
+/**
+ * The gql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
+ */
+export function gql(source: "query queryMyArticles($user_id: String!) {\n  posts(where: {user_id: {_eq: $user_id}, tag: {_eq: \"文章\"}}) {\n    title\n  }\n}\n"): (typeof documents)["query queryMyArticles($user_id: String!) {\n  posts(where: {user_id: {_eq: $user_id}, tag: {_eq: \"文章\"}}) {\n    title\n  }\n}\n"];
+/**
+ * The gql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
+ */
 export function gql(source: "query MyQuery($account: String!, $password: String!) {\n  users(where: {account: {_eq: $account}, password: {_eq: $password}}) {\n    id\n  }\n}\n"): (typeof documents)["query MyQuery($account: String!, $password: String!) {\n  users(where: {account: {_eq: $account}, password: {_eq: $password}}) {\n    id\n  }\n}\n"];
 /**
  * The gql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
  */
-export function gql(source: "\n  mutation newAccount($account: String = \"\", $id: String = \"\", $name: String = \"\", $password: String = \"\", $time: timestamp = \"\") {\n  insert_users_one(object: {account: $account, id: $id, name: $name, password: $password, time: $time}) {\n    id\n  }\n}\n"): (typeof documents)["\n  mutation newAccount($account: String = \"\", $id: String = \"\", $name: String = \"\", $password: String = \"\", $time: timestamp = \"\") {\n  insert_users_one(object: {account: $account, id: $id, name: $name, password: $password, time: $time}) {\n    id\n  }\n}\n"];
+export function gql(source: "\n  mutation newAccount($account: String = \"\", $id: String = \"\", $name: String = \"\", $password: String = \"\") {\n  insert_users_one(object: {account: $account, id: $id, name: $name, password: $password}) {\n    id\n  }\n}\n"): (typeof documents)["\n  mutation newAccount($account: String = \"\", $id: String = \"\", $name: String = \"\", $password: String = \"\") {\n  insert_users_one(object: {account: $account, id: $id, name: $name, password: $password}) {\n    id\n  }\n}\n"];
 /**
  * The gql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
  */

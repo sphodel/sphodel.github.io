@@ -65,7 +65,7 @@ const Information = () => {
               navigate("article");
             }}
           >
-            文章 0
+            文章
           </button>
           <button
             className={"text-[#07c160] bg-[#F0FBF6] px-4 py-1 text-sm"}
@@ -73,7 +73,7 @@ const Information = () => {
               navigate("question");
             }}
           >
-            提问 0
+            提问
           </button>
           <div className={"pt-6"}>
             <Outlet />
