@@ -5,6 +5,10 @@ import {Link, useNavigate} from "react-router-dom";
 const Navbar = () => {
   const [text, setText] = useState("");
   const navigate=useNavigate()
+  const id=localStorage.getItem('id')
+  if(id==null){
+    navigate("login")
+  }
   return (
     <div className={"h-12 bg-[#444] flex justify-between items-center"}>
       <div className={"flex gap-10 pl-16"}>

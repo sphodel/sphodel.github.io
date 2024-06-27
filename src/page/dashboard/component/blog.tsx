@@ -23,7 +23,7 @@ const Blog = () => {
   const [summary, setSummary] = useState("");
   const [classify, setClassify] = useState("");
   const { TextArea } = Input;
-  const [selectedCategory, setSelectedCategory] = useState(0);
+  const [selectedCategory, setSelectedCategory] = useState(-1);
   const categories = ["技术", "产品", "运营", "其他"];
   const [editorContent, setEditorContent] = useState("");
   const [messageApi, contextHolder] = message.useMessage();
